@@ -31,12 +31,10 @@ public class P1PartB1
     		// if both divisors are the same then add it only once
     		if( i == (x/i)) {
     			y += i;
-    			
     		}
     		// else add both divisors
     		else {
     			y += ( i + x/i );
-    			
     		}
     	}
     }
