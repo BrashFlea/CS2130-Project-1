@@ -1,5 +1,8 @@
 // Program to calculate the sum of the divisors
 // of a positive integer.
+
+import java.lang.Math;
+
 public class P1PartB1
 {
   public static void main(String args[])
@@ -18,10 +21,28 @@ public class P1PartB1
   public static long SumOfDivisors(long x)
   {
     long y = 0;
-    // ...put code here...
 
+    // find all divisors which divides 'x'
+    for (int i = 2; i <= Math.sqrt(x); i++) {
+    	
+    	// if 'i' is a divisor of 'x'
+    	if( x%i == 0 ) {
+    		
+    		// if both divisors are the same then add it only once
+    		if( i == (x/i)) {
+    			y += i;
+    			
+    		}
+    		// else add both divisors
+    		else {
+    			y += ( i + x/i );
+    			
+    		}
+    	}
+    }
 
-    return y;
+    // Add the original number and 1 as they are always divisors
+    return (y += (1 + x));
   }
 
 } // end class
