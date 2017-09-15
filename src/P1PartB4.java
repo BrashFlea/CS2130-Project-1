@@ -1,4 +1,4 @@
-// Program to calculate BaseB of two positive integers
+// Program to convert from base 10 to Base B between 2-10
 
 public class P1PartB4 {
     
